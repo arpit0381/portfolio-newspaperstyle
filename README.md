@@ -1,87 +1,50 @@
-# 📰 THE ASHWIN JAUHARY — TECHNICAL DISPATCH V.4.0
+# 📰 THE SAMRIDDHI BANSAL — TECHNICAL & DATA DISPATCH
 
-### **"All the Code That's Fit to Ship."**
+### **"All the Code and Data That's Fit to Ship."**
 
 ---
 
 ## 📂 THE ARCHIVE AT A GLANCE
-Welcome to the central repository of **The Ashwin Jauhary Dispatch**. This is not a portfolio; it is a hyper-realistic, forensic-styled archival interface. It blends 19th-century broadsheet aesthetics with 21st-century deep-tech infrastructure.
+Welcome to the central repository of **The Samriddhi Bansal Dispatch**. This is an investigative, broadsheet-styled portfolio and career dossier for **Samriddhi Bansal** — BCA Undergraduate Scholar at PSIT College of Higher Education (9.18 CGPA, 10.0 SGPA in Semester II), Logix Club Representative, GeeksForGeeks Campus Ambassador, and Data Analytics Specialist.
 
-[![Tech Stack](https://img.shields.io/badge/Stack-Next.js%20|%20TypeScript%20|%20Framer%20Motion-black?style=for-the-badge)](https://ashwin-jauhary.vercel.app)
-[![AI Powered](https://img.shields.io/badge/AI-Groq%20|%20Gemini%20|%20Sentiment%20Analysis-C0392B?style=for-the-badge)](https://ashwin-jauhary.vercel.app)
+[![Tech Stack](https://img.shields.io/badge/Stack-Next.js%20|%20TypeScript%20|%20Framer%20Motion-black?style=for-the-badge)](https://samriddhi-bansal.vercel.app)
+[![Data Focus](https://img.shields.io/badge/Focus-Power%20BI%20|%20Excel%20|%20C++%20|%20Python-27ae60?style=for-the-badge)](https://samriddhi-bansal.vercel.app)
 
 ---
 
-## 🔍 FORENSIC FEATURES (THE "NEXT-LEVEL")
+## 🔍 INVESTIGATIVE HIGHLIGHTS
 
-### 1. **The Investigative Lens (Evidence Magnifier)** 🕵️‍♂️
-Deploys a high-fidelity 2.5x magnification glass across all critical data nodes. 
-*   **Tactical Zoom**: Forensic crosshairs and scan telemetry lines.
-*   **Visual Interrogation**: Active on all project schematics, avatars, and technical charts.
+### 1. **The Investigative Lens (Evidence Magnifier)** 🕵️‍♀️
+Deploys a high-fidelity 2.5x magnification glass across all critical data nodes, schematics, and analytical charts.
 
-### 2. **AI Dispatcher v4.0 (Sentiment-Aware Voice)** 🎙️
-An LLM-integrated communication agent that doesn't just respond—it *senses*.
-*   **Emotional Intelligence**: Adjusts voice pitch, rate, and volume based on user sentiment analysis.
-*   **AI Stack**: Powered by Groq/Gemini for blistering 500ms response times.
+### 2. **AI Dispatcher v4.0 (Voice & Telegraph Dispatch)** 🎙️
+An LLM-integrated communication agent trained on Samriddhi Bansal's academic distinction, Power BI dashboards, Excel analytics, Logix Club leadership, and verified credentials.
 
 ### 3. **Dynamic Masthead & Telemetry** 🌤️
-The site's header is a living ticker that adapts to the user's real-world context.
-*   **Temporal Editions**: Shifts between *Morning Gold*, *Final City*, and *Midnight Silver* based on local time.
-*   **Weather Dispatch**: Real-time localized weather telemetry integrated into the broadsheet header.
+The site's header is a living ticker that adapts to the reader's real-world time and Kanpur dispatch edition.
 
-### 4. **The Continuity Matrix (GitHub Registry)** 📊
-A custom-engineered visual record of technical persistence.
-*   **Forensic Charts**: Streak monitors and velocity graphs with forensic magnification support.
+### 4. **Verified Certifications & Technical Arsenal** 📊
+Detailed breakdown of certifications from **Infosys Springboard** (Power BI, Advanced Excel) and **HackerRank** (Problem Solving).
 
 ---
 
-## 🛠️ THE ARCHITECTURE (TECH INDEX)
+## 🛠️ THE ARCHITECTURE
 
 | Component | Technology | Role |
 | :--- | :--- | :--- |
-| **Foundation** | Next.js 15 (App Router) | Core Dispatch System |
-| **Styling** | Tailwind CSS v4 | Printing-Press Aesthetics |
-| **Logic** | TypeScript | Type-Safe Forensic Records |
+| **Foundation** | Next.js (App Router) | Core Dispatch System |
+| **Styling** | Tailwind CSS v4 & Vintage Broadsheet Typography | Printing-Press Aesthetics |
+| **Logic** | TypeScript | Type-Safe Analytical Records |
 | **Motion** | Framer Motion | Smooth Mechanical Transitions |
-| **Intelligence** | Gemini / Groq API | The Dispatcher Brain |
-| **Deployment** | Vercel Edge | Global Low-Latency Delivery |
+| **Intelligence** | Groq AI / Gemini API | The Dispatcher Brain |
 
 ---
 
-## 🚀 REQUISITION PROTOCOL (INSTALLATION)
+## 👤 AUTHOR CONTACT
 
-To requisition a local instance of this archival system:
-
-1. **Clone the Dossier**
-   ```bash
-   git clone https://github.com/Ashwinjauhary/The-Ashwin-Jauhary.git
-   ```
-
-2. **Acquire Dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Configure Telemetry (.env.local)**
-   ```env
-   NEXT_PUBLIC_GEMINI_API_KEY=your_key_here
-   NEXT_PUBLIC_FORMSPREE_KEY=xbdqrady
-   ```
-
-4. **Initialize Production**
-   ```bash
-   npm run dev
-   ```
-
----
-
-## 📜 PUBLIC NOTICE & LICENSE
-All editorial content, technical schematics, and UI signatures within this repository are the property of **The Ashwin Jauhary Bureau**. 
-
-**Classification**: Open Source (MIT). 
-**Distribution**: Free for technical inspection and recruitment purposes.
-
----
-
-> *"Architecture is the deep-tech infrastructure that powers our impending future."*
-> — **ASHWIN JAUHARY, Chief Correspondent**
+- **Correspondent**: Samriddhi Bansal
+- **Email**: [samriddhi.7289@gmail.com](mailto:samriddhi.7289@gmail.com)
+- **Phone**: +91-70817 89289
+- **LinkedIn**: [linkedin.com/in/samriddhibansalysihek](https://www.linkedin.com/in/samriddhibansalysihek)
+- **Location**: Kanpur, Uttar Pradesh, India
+"# portfolio-newspaperstyle" 
