@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Ashwin Jauhary | Full Stack AI Architect',
-    short_name: 'Ashwin J.',
-    description: 'Investigating high-fidelity AI systems and strategic technical architecture.',
+    name: 'Samriddhi Bansal | Data Analyst & Web Developer',
+    short_name: 'Samriddhi B.',
+    description: 'Investigating high-impact data analytics, business intelligence, and software development.',
     start_url: '/',
     display: 'standalone',
     background_color: '#000000',

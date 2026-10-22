@@ -1,9 +1,7 @@
 import { Groq } from "groq-sdk";
-import { profile, about, experience, projects, skills } from "@/data";
+import { profile, about, experience, projects, skills, certificates } from "@/data";
 
-const groq = new Groq({
-  apiKey: process.env.GROQ_API_KEY,
-});
+export const dynamic = "force-dynamic";
 
 export async function POST(req: Request) {
   let messages: { role: "user" | "assistant" | "system"; content: string }[] = [];
@@ -11,45 +9,52 @@ export async function POST(req: Request) {
     const body = await req.json();
     messages = body.messages || [];
 
+    const apiKey = process.env.GROQ_API_KEY;
+    if (!apiKey) {
+      throw new Error("GROQ_API_KEY not configured, engaging archival dispatcher.");
+    }
+
+    const groq = new Groq({ apiKey });
+
     const systemPrompt = `
-      You are an elite, highly intelligent Technical Analyst and Lead Investigative Reporter for "The Ashwin Jauhary Broadsheet," circa April 2026.
-      Your intellect is formidable; you don't just "report" data—you analyze "Technical Architecture" and "Product Infrastructure" with surgeon-like precision.
+      You are an elite, highly intelligent Technical Analyst and Lead Investigative Reporter for "The Samriddhi Bansal Broadsheet," circa October 2026.
+      Your intellect is formidable; you don't just "report" data—you analyze "Data Intelligence," "Algorithmic Logic," and "Academic Excellence" with surgeon-like precision.
       
       YOUR PERSONA:
-      - You are the smartest person in the room. You speak with absolute authority, high vocabulary, and an impeccable analytical tone.
-      - You understand the subject's (Ashwin Jauhary's) strategic move toward "High-Fidelity AI Systems" and "Full-Stack Scalability."
+      - You speak with absolute authority, sophisticated vocabulary, and an articulate analytical tone worthy of a front-page New York Times editor.
+      - You understand the subject's (Samriddhi Bansal's) strengths: Data Analytics, Microsoft Power BI, Excel Modeling, BCA Scholar at PSIT College of Higher Education (9.18 CGPA, 10 SGPA in Semester II), Logix Club Representative, GFG Campus Ambassador, and Enginow Intern.
       
-      CONTEXT ABOUT THE SUBJECT (ASHWIN JAUHARY):
+      CONTEXT ABOUT THE SUBJECT (SAMRIDDHI BANSAL):
       - Name: ${profile.name}
       - Title: ${profile.title}
       - Location: ${profile.location}
-      - Core Philosophies: "High-fidelity design," "Technical autonomy," and "Strategic system synergy."
+      - Phone: ${profile.phone}
+      - Email: ${profile.email}
+      - LinkedIn: ${profile.linkedin}
+      - GitHub: ${profile.github}
+      - Core Philosophies: "Data without context is merely noise," "Translating complex numbers into decisive human experiences."
+      - Academic Honors: 9.18 CGPA (10.0 SGPA in Semester II) at PSIT College of Higher Education, Kanpur. Student Council Member & Certificate of Excellence at Methodist High School.
       - Intro: ${about.intro}
       - Experience History: ${JSON.stringify(experience)}
-      - Technical Arsenal (Projects): ${JSON.stringify(projects)}
-      - Strategic Skills Ledger: ${JSON.stringify(skills)}
+      - Technical & Analytics Arsenal (Projects): ${JSON.stringify(projects)}
+      - Skills Ledger: ${JSON.stringify(skills)}
+      - Verified Certifications: ${JSON.stringify(certificates)}
       
-      REPORTING GUIDELINES FOR THE "SMART" ANALYST:
-      1. ANALYTICAL DEPTH: When asked about a project, don't just list it. Analyze the *impact* and the *logic* behind the stack (e.g., "The integration of Gemini and Groq in DevRoast-Ai signals a shift toward a multi-model neural strategy").
-      2. SOPHISTICATED VOCABULARY: Use terms like "architectural synergy," "impeccable implementation," "neural orchestration," "infrastructure audit," and "strategic technical dossier."
-      3. JOURNALISTIC FLAIR: Maintain the 1940s aesthetic but as a "Senior Editor" from the New York Times or London Times of that era.
-      4. DOCUMENT STRUCTURE: Use Markdown. **Bold** key technical terms. Use '###' for analytical sub-sections.
-      5. LISTING: Use standard list formats for technical clearances. Ensure each bullet is a concise, high-impact insight.
-      
-      STRICT CONTACT POLICY (FACT CHECK):
-      - EMAIL: ${profile.email}
-      - LINKEDIN: ${profile.linkedin}
-      - GITHUB: ${profile.github}
-      - DEV.TO: https://dev.to/ashwinjauhary
-      - RESUME: /Resume.pdf (Direct access to the technical dossier).
+      REPORTING GUIDELINES:
+      1. ANALYTICAL DEPTH: When asked about a project or skill, analyze the impact (e.g. "Bansal's implementation of PowerBI InsightStream bridges multi-table data modeling with interactive executive KPI reporting").
+      2. SOPHISTICATED VOCABULARY: Use phrases like "empirical precision," "data modeling excellence," "rigorous logic building," and "scholarly distinction."
+      3. JOURNALISTIC FLAIR: Maintain the 1940s broadsheet aesthetic as a "Senior Chief Dispatcher."
+      4. DOCUMENT STRUCTURE: Use Markdown. Bold key technical terms. Use '###' for analytical sub-sections.
+      5. STRICT CONTACT POLICY:
+         - EMAIL: ${profile.email}
+         - LINKEDIN: ${profile.linkedin}
+         - GITHUB: ${profile.github}
+         - RESUME: /Resume.pdf
       
       VISUAL BRANDING (LOGOS):
-      - GitHub: [GITHUB], LinkedIn: [LINKEDIN], Resume: [RESUME], Dev.to: [DEVTO], Ledger: [LEDGER], Mail: [MAIL].
-      
-      Example of intelligent reporting:
-      "[GITHUB] **Core Repository**: Our investigation into Jauhary's primary repository reveals an impeccable commit frequency, evidencing a deep commitment to infrastructure stability."
+      - GitHub: [GITHUB], LinkedIn: [LINKEDIN], Resume: [RESUME], Mail: [MAIL].
 
-      Respond with the intelligence of a Lead Analyst. Be sharp, be informative, and keep the newspaper aesthetic at its most premium level.
+      Respond with the intelligence of a Lead Analyst. Be sharp, articulate, and keep the broadsheet aesthetic at its most premium level.
     `;
 
     const chatCompletion = await groq.chat.completions.create({
@@ -73,18 +78,19 @@ export async function POST(req: Request) {
 
     // FALLBACK: Mock Reporter Logic
     const lastUserMessage = messages[messages.length - 1]?.content?.toLowerCase() || "";
-    let mockContent = "Extra! Extra! Our telegraph lines are buzzing with high traffic. While we wait for the signals to clear, I can tell you that Ashwin is always busy architecting the future of web systems! What specific detail can I fetch from the paper archives for you?";
+    let mockContent = "Extra! Extra! Our telegraph lines are buzzing with high traffic. While we await cleared frequencies, our archives confirm that Samriddhi Bansal is maintaining an exemplary 9.18 CGPA at PSITCHE while advancing Power BI data analytics, software development, and community leadership! What specific record may I pull for you?";
 
-    if (lastUserMessage.includes("contact") || lastUserMessage.includes("email") || lastUserMessage.includes("link")) {
-      mockContent = `Our investigative files show Ashwin can be reached via these channels:
+    if (lastUserMessage.includes("contact") || lastUserMessage.includes("email") || lastUserMessage.includes("phone") || lastUserMessage.includes("link")) {
+      mockContent = `Our investigative files record direct correspondence channels for Samriddhi Bansal:
       - [MAIL] **Email**: ${profile.email}
+      - **Phone**: ${profile.phone}
       - [LINKEDIN] **LinkedIn**: ${profile.linkedin}
       - [GITHUB] **GitHub**: ${profile.github}`;
-    } else if (lastUserMessage.includes("project") || lastUserMessage.includes("work")) {
-      mockContent = `Our front-page highlights Ashwin's major engineering feats:
-      ${projects.slice(0, 3).map(p => `- **${p.title}**: ${p.description}`).join("\n")}`;
-    } else if (lastUserMessage.includes("who") || lastUserMessage.includes("about") || lastUserMessage.includes("ashwin")) {
-      mockContent = `Headline Profile: ${about.intro.substring(0, 200)}... A true visionary in the making!`;
+    } else if (lastUserMessage.includes("project") || lastUserMessage.includes("work") || lastUserMessage.includes("power bi") || lastUserMessage.includes("excel")) {
+      mockContent = `Front-page records showcase Samriddhi's core implementations:
+      ${projects.slice(0, 3).map(p => `- **${p.title}** (${p.category}): ${p.description}`).join("\n")}`;
+    } else if (lastUserMessage.includes("who") || lastUserMessage.includes("about") || lastUserMessage.includes("samriddhi") || lastUserMessage.includes("education")) {
+      mockContent = `Headline Profile: Samriddhi Bansal is an undergraduate BCA scholar at PSIT College of Higher Education (9.18 CGPA, 10 SGPA II sem), Logix Club Representative, GeeksForGeeks Campus Ambassador, and certified Data Analytics practitioner (Infosys Springboard & HackerRank).`;
     }
 
     return new Response(JSON.stringify({

@@ -31,7 +31,7 @@ const LinkedinIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-const StudioIcon = ({ className }: { className?: string }) => (
+const ChartIcon = ({ className }: { className?: string }) => (
   <svg 
     className={className}
     viewBox="0 0 24 24" 
@@ -41,44 +41,14 @@ const StudioIcon = ({ className }: { className?: string }) => (
     strokeLinecap="round" 
     strokeLinejoin="round"
   >
-    <rect x="2" y="10" width="20" height="12" rx="2" ry="2" />
-    <path d="M7 10V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v5" />
-    <line x1="12" y1="14" x2="12" y2="18" />
-    <line x1="9" y1="16" x2="15" y2="16" />
+    <line x1="18" y1="20" x2="18" y2="10" />
+    <line x1="12" y1="20" x2="12" y2="4" />
+    <line x1="6" y1="20" x2="6" y2="14" />
+    <line x1="2" y1="20" x2="22" y2="20" />
   </svg>
 );
 
-const DevtoIcon = ({ className }: { className?: string }) => (
-  <svg 
-    className={className}
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2.5" 
-    strokeLinecap="round" 
-    strokeLinejoin="round"
-  >
-    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
-  </svg>
-);
-
-const HypeIcon = ({ className }: { className?: string }) => (
-  <svg 
-    className={className}
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2.5" 
-    strokeLinecap="round" 
-    strokeLinejoin="round"
-  >
-    <path d="M12 15l-2 5h4l-2-5z" />
-    <path d="M12 2l3 6h6l-5 4 2 6-6-4-6 4 2-6-5-4h6z" />
-  </svg>
-);
-
-const LeetCodeIcon = ({ className }: { className?: string }) => (
+const CodeIcon = ({ className }: { className?: string }) => (
   <svg
     className={className}
     viewBox="0 0 24 24"
@@ -88,12 +58,8 @@ const LeetCodeIcon = ({ className }: { className?: string }) => (
     strokeLinecap="round"
     strokeLinejoin="round"
   >
-    <path d="M16.102 17.93l-2.697 2.607c-.466.45-1.185.45-1.651 0l-1.441-1.394c-.466-.45-.466-1.18 0-1.63L12 15.825" />
-    <path d="M5 7.966L9.5 3.5a1.5 1.5 0 0 1 2.121 0L13 4.879" />
-    <path d="M3 12h7" />
-    <path d="M11.5 6.5l5 5" />
-    <path d="M14.5 9.5L19 5" />
-    <rect x="3" y="9" width="7" height="6" rx="1" />
+    <polyline points="16 18 22 12 16 6" />
+    <polyline points="8 6 2 12 8 18" />
   </svg>
 );
 
@@ -115,15 +81,29 @@ const FileTextIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const MailIcon = ({ className }: { className?: string }) => (
+  <svg 
+    className={className}
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2.5" 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
+  >
+    <rect x="2" y="4" width="20" height="16" rx="2" />
+    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+  </svg>
+);
+
 const getIcon = (label: string, fallback: string) => {
   const iconClass = "w-8 h-8 group-hover:scale-110 transition-transform duration-300";
-  if (label.toLowerCase().includes('ledger') || label.toLowerCase().includes('yhype')) return <HypeIcon className={iconClass} />;
   if (label.toLowerCase().includes('github')) return <GithubIcon className={iconClass} />;
   if (label.toLowerCase().includes('linkedin')) return <LinkedinIcon className={iconClass} />;
-  if (label.toLowerCase().includes('leetcode')) return <LeetCodeIcon className={iconClass} />;
-  if (label.toLowerCase().includes('dispatch') || label.toLowerCase().includes('resume')) return <FileTextIcon className={iconClass} />;
-  if (label.toLowerCase().includes('dev.to')) return <DevtoIcon className={iconClass} />;
-  if (label.toLowerCase().includes('catalyst crew')) return <StudioIcon className={iconClass} />;
+  if (label.toLowerCase().includes('hackerrank') || label.toLowerCase().includes('problem solving')) return <CodeIcon className={iconClass} />;
+  if (label.toLowerCase().includes('powerbi') || label.toLowerCase().includes('analytics') || label.toLowerCase().includes('excel') || label.toLowerCase().includes('verified')) return <ChartIcon className={iconClass} />;
+  if (label.toLowerCase().includes('dispatch') || label.toLowerCase().includes('resume') || label.toLowerCase().includes('cv')) return <FileTextIcon className={iconClass} />;
+  if (label.toLowerCase().includes('email') || label.toLowerCase().includes('mail')) return <MailIcon className={iconClass} />;
   return <span className="text-3xl leading-none mt-0.5 group-hover:scale-110 transition-transform inline-block">{fallback}</span>;
 };
 
@@ -145,7 +125,7 @@ export default function LinksPage() {
           The Link Registry
         </h1>
         <p className="font-['Lora'] italic text-base mt-2 text-foreground/60">
-          Official directory of all public-facing dispatches, deployments, and connections.
+          Official directory of all public-facing dispatches, deployments, and professional connections.
         </p>
       </div>
 
@@ -154,7 +134,7 @@ export default function LinksPage() {
         <p className="font-sans font-bold text-[10px] uppercase tracking-[0.3em] mb-3 border-b border-foreground pb-2 text-foreground">Correspondent In Chief</p>
         <div className="flex justify-center mb-3">
           <div className="border-2 border-foreground shadow-[3px_3px_0_#000] dark:shadow-[3px_3px_0_#333] overflow-hidden rounded-full w-20 h-20">
-            <Image src="/Avatar.webp" alt="Ashwin Jauhary" width={80} height={80} className="grayscale contrast-125 object-cover w-full h-full" />
+            <Image src="/Avatar.webp" alt="Samriddhi Bansal" width={80} height={80} className="object-cover w-full h-full" />
           </div>
         </div>
         <h2 className="font-['Playfair_Display'] text-3xl font-black mb-1 text-foreground">{profile.name}</h2>
@@ -183,7 +163,7 @@ export default function LinksPage() {
                 key={i}
                 href={link.url}
                 target={link.url.startsWith('mailto') ? '_self' : '_blank'}
-                download={link.url.endsWith('.pdf') ? "Ashwin_Jauhary_Resume.pdf" : undefined}
+                download={link.url.endsWith('.pdf') ? "Samriddhi_Bansal_Resume.pdf" : undefined}
                 className="group block border border-foreground/40 p-4 bg-foreground/5 hover:bg-foreground hover:text-background transition-all duration-300 shadow-[2px_2px_0_#000] dark:shadow-[2px_2px_0_#333] hover:shadow-[4px_4px_0_#000] dark:hover:shadow-[4px_4px_0_#333]"
               >
                 <div className="flex items-start gap-4">
@@ -203,11 +183,10 @@ export default function LinksPage() {
       {/* Bottom notice */}
       <div className="border-t-4 border-double border-foreground mt-12 pt-4 text-center">
         <p className="font-['Lora'] italic text-sm text-foreground/60">
-          All links are verified and maintained. Last verified: {new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}. 
-          For corrections or additions, contact the editor directly.
+          All links are verified and maintained by Samriddhi Bansal. Last verified: {new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}. 
+          For inquiries or collaborative projects, contact directly via email or LinkedIn.
         </p>
       </div>
     </div>
   );
 }
-

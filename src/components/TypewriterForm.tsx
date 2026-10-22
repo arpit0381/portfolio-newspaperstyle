@@ -142,7 +142,7 @@ export default function TypewriterForm() {
           {/* Paper Header */}
           <div className="text-center mb-12 border-b-2 border-dashed border-foreground/20 pb-6">
             <h3 className="font-['Playfair_Display'] text-3xl font-black uppercase tracking-tight text-foreground">The Dispatch</h3>
-            <p className="font-sans text-[10px] font-bold uppercase tracking-widest text-foreground/40 mt-1">To: Ashwin Jauhary · Correspondence Bureau</p>
+            <p className="font-sans text-[10px] font-bold uppercase tracking-widest text-foreground/40 mt-1">To: Samriddhi Bansal · Correspondence Bureau</p>
           </div>
 
           {/* Form Fields as Typed Lines */}

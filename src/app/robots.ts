@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://the-ashwin-jauhary.vercel.app/sitemap.xml',
+    sitemap: 'https://samriddhi-bansal.vercel.app/sitemap.xml',
   };
 }

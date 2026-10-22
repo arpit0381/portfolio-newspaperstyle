@@ -1,6 +1,5 @@
 "use client";
 import { ExternalLink, Printer } from "lucide-react";
-import Image from "next/image";
 import { profile, projects } from "@/data";
 import BureauOfRecords from "@/components/BureauOfRecords";
 import DynamicMasthead from "@/components/DynamicMasthead";
@@ -42,8 +41,6 @@ const LinkedinIcon = ({ size = 16 }: { size?: number }) => (
 );
 
 export default function Home() {
-  const today = new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }).toUpperCase();
-
   return (
     <div className="max-w-[1400px] mx-auto px-4 py-8 min-h-screen relative font-sans text-foreground transition-colors duration-500 overflow-x-hidden md:overflow-x-visible">
       {/* ===== MASTHEAD ===== */}
@@ -60,7 +57,7 @@ export default function Home() {
             <span className="hidden xs:inline">Clip to PDF</span>
           </button>
           <h1 className="text-[2.2rem] xs:text-[2.8rem] sm:text-[4.5rem] md:text-[6.5rem] lg:text-[7.8rem] leading-[0.85] sm:leading-none mb-2 tracking-tighter font-['Playfair_Display'] font-black uppercase antialiased sm:whitespace-nowrap text-foreground wrap-break-word sm:break-normal" style={{ textShadow: "1px 1px 0px rgba(0,0,0,0.15)"}}>
-            The Ashwin Jauhary
+            The Samriddhi Bansal
           </h1>
         </div>
       </header>
@@ -71,50 +68,50 @@ export default function Home() {
         {/* LEAD STORY (Cols 1-8) */}
         <article className="md:col-span-8 pr-0 md:pr-8 md:border-r-[1.5px] border-foreground/40">
 
-          <h2 className="font-['Playfair_Display'] text-3xl sm:text-5xl md:text-[4rem] font-black leading-[0.9] mb-6 tracking-tight uppercase text-center border-b-[3px] border-foreground pb-6 text-foreground">
-            Architect Unleashes Premium Web Infrastructure
+          <h2 className="font-['Playfair_Display'] text-3xl sm:text-5xl md:text-[3.8rem] font-black leading-[0.92] mb-6 tracking-tight uppercase text-center border-b-[3px] border-foreground pb-6 text-foreground">
+            BCA Scholar Synthesizes Data Analytics & Community Leadership
           </h2>
 
           <div className="flex flex-col sm:flex-row items-center justify-between mb-6 border-b border-foreground/20 pb-4 sm:pb-2 gap-4 sm:gap-0 italic font-['Lora'] text-sm">
             <span className="flex items-center gap-3">
               <InvestigativeLens
                 src="/Avatar.webp"
-                alt="Ashwin Jauhary"
-                className="w-12 h-12 rounded-full border-2 border-foreground"
+                alt="Samriddhi Bansal"
+                className="w-12 h-12 rounded-full border-2 border-foreground object-cover"
               />
-              By <strong className="font-sans uppercase tracking-widest text-xs not-italic">ASHWIN JAUHARY</strong>
+              By <strong className="font-sans uppercase tracking-widest text-xs not-italic">SAMRIDDHI BANSAL</strong>
             </span>
             <span className="uppercase text-xs font-bold font-sans tracking-widest not-italic">{profile.location}</span>
           </div>
 
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 text-justify-news font-['Lora'] text-[0.95rem] leading-relaxed">
             <p className="drop-cap">
-              I<span className="tracking-tight">n an unprecedented move that</span> has rippled across the digital landscape, a local developer is redefining what it means to build software. Specializing in frontend architectures and AI-integrated systems, the focus has shifted entirely to crafting <i>high-fidelity</i> interfaces.
+              I<span className="tracking-tight">n an academic era demanding</span> both sharp analytical acumen and empathetic leadership, an undergraduate scholar in Kanpur is demonstrating how raw data transforms into decisive action. Maintaining a flawless 10.0 SGPA in Semester II and a cumulative 9.18 CGPA at PSIT College of Higher Education, Samriddhi Bansal is setting an enviable benchmark for technical rigor.
             </p>
             <p className="mt-4">
-              &quot;Never settle for just &apos;working code&apos;,&quot; the architect declared in a recent manifesto. &quot;A system should be a piece of art, from the database indices up to the CSS transition curves.&quot; Observers note that this methodology is quickly setting a new standard for modern application development.
+              &quot;Data without context is merely noise,&quot; Bansal noted during a recent technical colloquium. &quot;True problem solving begins when you combine deep logic, statistical models, and intuitive user experiences to solve tangible human challenges.&quot;
             </p>
             <p className="mt-4">
-              Armed with technologies such as Next.js and React, combined with aggressive AI deployment, the resulting platforms are reportedly executing instructions at blistering speeds.
+              Armed with Microsoft Power BI, advanced analytical Excel frameworks, and core programming languages including C, C++, and Python, Bansal is actively bridging computational science with real-world business intelligence.
             </p>
 
             {/* Inline Image Callout */}
             <div className="my-6 border-[3px] border-black p-2 bg-[#f0ebd9] inline-block w-full break-inside-avoid shadow-[4px_4px_0_#1a1a1a]">
               <div className="border border-black p-1 flex justify-center">
-                <InvestigativeLens src="/logo.webp" alt="Architect Graphic" />
+                <InvestigativeLens src="/logo.webp" alt="Data Analytics & Insights Emblem" />
               </div>
-              <p className="text-[10px] uppercase font-sans font-bold text-center mt-2 tracking-widest px-2">Fig 1. Abstract System Schematic.</p>
+              <p className="text-[10px] uppercase font-sans font-bold text-center mt-2 tracking-widest px-2">Fig 1. Data Intelligence & Analytics Seal.</p>
             </div>
 
-            <h3 className="font-['Playfair_Display'] font-black text-xl uppercase mt-6 mb-2 break-after-avoid">The Shift to Autonomy</h3>
+            <h3 className="font-['Playfair_Display'] font-black text-xl uppercase mt-6 mb-2 break-after-avoid">Tri-Fold Leadership</h3>
             <p className="mt-2">
-              Early tests of the <a href="https://dev-roast-ai-sand.vercel.app" target="_blank" className="font-bold border-b border-black hover:bg-black/10 transition-colors">DevRoast-Ai</a> protocol indicate that machines are now fully capable of interrogating GitHub repositories with remarkable wit and precision. The integration of the Gemini API and robust backend endpoints signals a departure from purely static applications to fully autonomous digital agents.
+              Beyond pure academics, Bansal commands prominent roles across university ecosystems. As elected <strong>Club Representative at Logix Club (PSITCHE)</strong>, she spearheads technical competitions and student mentorship. Simultaneously, as <strong>Campus Ambassador for GeeksForGeeks</strong>, she champions competitive programming literacy across engineering faculties.
             </p>
             <p className="mt-4">
-              Citizens of the web are advised to prepare for increasingly interactive and sophisticated digital experiences. The current trajectory suggests that the line between artificial logic and premium human-centered design is permanently blurred. Sources close to the developer indicate that new, undocumented systems are already being prototyped in secret.
+              Her industry exposure expands further through her tenure as <strong>Content Strategist & Community Manager Intern at Enginow</strong>, where she curates educational dispatches and interactive campaigns that engage growing digital communities.
             </p>
             <p className="mt-4 mb-4">
-              When asked for further comment regarding the timeline of these unprecedented deployments, the development team offered only a single, cryptic response: &quot;We push to production on Fridays.&quot;
+              From holding elected office on the Methodist High School Student Council to earning multiple verified credentials from Infosys Springboard and HackerRank, the dispatch confirms: this is a talent built on unwavering discipline and continuous growth.
             </p>
 
             <div className="w-8 h-px bg-black mx-auto my-6 break-inside-avoid"></div>
@@ -133,15 +130,15 @@ export default function Home() {
             </h3>
             <div className="font-['Lora'] text-justify-news space-y-3 text-sm">
               <p>
-                <strong>ASHWIN JAUHARY</strong> is a Full-Stack Developer and current BCA scholar at PSIT Kanpur (Class of 2027). He is known exclusively for blending extreme deep-tech infrastructure with an impeccable eye for print and digital design.
+                <strong>SAMRIDDHI BANSAL</strong> is an undergraduate BCA scholar at PSIT College of Higher Education, Kanpur (Class of 2028). Renowned for an academic standing of <strong>9.18 CGPA (10 SGPA in Semester II)</strong>, she specializes in Data Analytics, Power BI, UI/UX design, and algorithmic problem solving.
               </p>
 
               <blockquote className="my-4 border-y-2 border-foreground py-3 font-['Playfair_Display'] text-xl leading-snug italic text-center px-4 bg-foreground/5 text-foreground">
-                &quot;Designing the deep-tech infrastructure that powers our impending future.&quot;
+                &quot;Translating complex datasets into actionable intelligence and intuitive human experiences.&quot;
               </blockquote>
 
               <p>
-                When not architecting custom compilers or engineering secure systems, the author focuses entirely on the rapid scaling of digital platforms.
+                A verified skill recipient from Infosys Springboard and HackerRank, Bansal combines computational logic with dynamic community leadership across Logix Club, GeeksForGeeks, and Enginow.
               </p>
             </div>
           </div>
@@ -151,21 +148,21 @@ export default function Home() {
             <h3 className="font-['Playfair_Display'] text-xl font-black uppercase mb-3 text-center">Tech Index & Barometer</h3>
             <table className="w-full font-mono text-[11px] uppercase tracking-tighter border-y-2 border-black">
               <tbody>
-                <tr className="border-b border-black/20"><td className="py-1.5 font-bold">React / Next.js</td><td className="text-right">+5.4 ▲</td></tr>
-                <tr className="border-b border-black/20"><td className="py-1.5 font-bold">Node.js (Core)</td><td className="text-right text-[#C0392B]">-0.1 ▼</td></tr>
-                <tr className="border-b border-black/20"><td className="py-1.5 font-bold">TypeScript</td><td className="text-right">+2.1 ▲</td></tr>
-                <tr className="border-b border-black/20"><td className="py-1.5 font-bold">Python / AI</td><td className="text-right">+8.9 ▲</td></tr>
-                <tr><td className="py-1.5 font-bold">Tailwind CSS</td><td className="text-right">STEADY ▬</td></tr>
+                <tr className="border-b border-black/20"><td className="py-1.5 font-bold">Microsoft Power BI</td><td className="text-right text-[#27ae60] font-bold">+9.4 ▲</td></tr>
+                <tr className="border-b border-black/20"><td className="py-1.5 font-bold">MS Excel & DAX</td><td className="text-right">+6.2 ▲</td></tr>
+                <tr className="border-b border-black/20"><td className="py-1.5 font-bold">Problem Solving (C/C++)</td><td className="text-right">+5.1 ▲</td></tr>
+                <tr className="border-b border-black/20"><td className="py-1.5 font-bold">Python & Data Analysis</td><td className="text-right text-[#27ae60] font-bold">+8.5 ▲</td></tr>
+                <tr><td className="py-1.5 font-bold">Web & UI/UX (HTML/CSS)</td><td className="text-right">STEADY ▬</td></tr>
               </tbody>
             </table>
-            <p className="text-[9px] uppercase font-sans mt-2 text-center text-black/60">Source: Internal Compiler Statistics.</p>
+            <p className="text-[9px] uppercase font-sans mt-2 text-center text-black/60">Source: Academic & Project Metric Audit.</p>
           </div>
 
           {/* WEATHER / NOTICES */}
           <div className="border border-black p-3 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] bg-opacity-20">
             <h4 className="font-sans font-bold text-xs uppercase tracking-widest border-b border-black mb-2 pb-1">Public Notice</h4>
             <p className="font-['Lora'] text-xs text-justify-news">
-              By order of the central routing committee, all incoming HTTP requests must be securely encrypted. Violators will be redirected.
+              Official dispatch from the BCA Department: High academic distinction recorded for Semester II. Applications for collaboration in data analytics and software engineering are warmly welcomed.
             </p>
           </div>
         </aside>
@@ -191,7 +188,7 @@ export default function Home() {
                 </h4>
                 <p className="text-xs font-sans font-bold mb-2 tracking-wide uppercase">Dateline: Localhost —</p>
                 <p className="text-[13px] text-justify-news mb-4">
-                  {project.description} Engineered using an advanced stack comprising <strong>{project.tech.join(", ")}</strong>.
+                  {project.description} Engineered using <strong>{project.tech.join(", ")}</strong>.
                 </p>
                 <div className="flex gap-4 items-center">
                   <a href={project.live} target="_blank" className="hover:bg-black hover:text-[#f5f0e8] transition-colors p-1" title="Live Preview">
@@ -210,13 +207,13 @@ export default function Home() {
         <section className="col-span-full my-8 border-[5px] border-foreground p-2 bg-foreground/5 transition-colors duration-500">
           <div className="border border-foreground p-4 sm:p-12 text-center bg-[url('https://www.transparenttextures.com/patterns/diagonal-stripes.png')] bg-opacity-20 flex flex-col items-center justify-center">
             <div className="bg-background p-6 sm:p-10 w-full max-w-4xl border-2 border-foreground shadow-[8px_8px_0px_#000] dark:shadow-[8px_8px_0px_#333] transition-colors duration-500">
-              <p className="font-sans font-bold text-sm tracking-widest uppercase mb-4 border-b border-foreground pb-2 inline-block text-foreground">Employment Opportunity</p>
-              <h2 className="font-['Playfair_Display'] text-3xl sm:text-6xl font-black uppercase mb-4 leading-[0.9] text-foreground">Wanted: Visionaries</h2>
+              <p className="font-sans font-bold text-sm tracking-widest uppercase mb-4 border-b border-foreground pb-2 inline-block text-foreground">Collaboration & Career Inquiry</p>
+              <h2 className="font-['Playfair_Display'] text-3xl sm:text-6xl font-black uppercase mb-4 leading-[0.9] text-foreground">Inquire For Excellence</h2>
               <p className="font-['Playfair_Display'] text-lg sm:text-2xl italic mb-8 max-w-2xl mx-auto text-foreground/80">
-                Currently accepting inquiries for high-stakes engineering & premium frontend design positions.
+                Currently seeking internship, software development, and data analytics opportunities with forward-thinking teams.
               </p>
               <div className="font-sans font-bold uppercase tracking-widest text-xs sm:text-xl border-y-2 border-foreground py-4 mb-8 text-foreground break-all sm:break-normal">
-                Send Telegrams To: <a href="mailto:ashwin2431333@gmail.com" className="bg-foreground text-background px-3 py-1 mt-2 sm:mt-0 sm:ml-2 hover:opacity-80 transition-opacity block sm:inline-block">ashwin2431333@gmail.com</a>
+                Direct Inquiries To: <a href={`mailto:${profile.email}`} className="bg-foreground text-background px-3 py-1 mt-2 sm:mt-0 sm:ml-2 hover:opacity-80 transition-opacity block sm:inline-block">{profile.email}</a>
               </div>
               <div className="flex justify-center gap-6 sm:gap-12 text-foreground">
                 <a href={profile.github} target="_blank" className="hover:scale-110 transition-transform p-2 border-2 border-foreground rounded-full" title="Github">
@@ -232,7 +229,5 @@ export default function Home() {
 
       </main>
     </div>
-
   );
 }
-

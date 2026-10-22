@@ -115,15 +115,15 @@ export default function Portfolio() {
              <div className="overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-[#9b5de5]/20 scrollbar-track-transparent">
                 <div className="min-w-[600px] sm:min-w-0">
                   <InvestigativeLens 
-                    src="https://ghchart.rshah.org/9b5de5/Ashwinjauhary" 
-                    alt="Ashwin's Github Chart" 
+                    src="https://ghchart.rshah.org/9b5de5/samriddhibansal" 
+                    alt="Samriddhi's Github Chart" 
                     className="w-full h-auto"
                   />
                 </div>
              </div>
              <div className="mt-4 flex justify-between items-center text-[#9b5de5]/60 font-mono text-[8px]">
                 <span>SOURCE: GHCHART.RSHAH.ORG</span>
-                <span>(RE)VERIFIED PURPLE CORE</span>
+                <span>(RE)VERIFIED ANALYTICS CORE</span>
              </div>
           </div>
 
@@ -133,7 +133,7 @@ export default function Portfolio() {
                 <p className="font-sans font-bold text-[8px] sm:text-[10px] uppercase tracking-widest mb-3 border-b border-[#9b5de5]/30 pb-1 text-[#9b5de5]">Fig 1.4: Persistence Streak Monitor</p>
                 <div className="flex justify-center">
                   <InvestigativeLens 
-                    src="https://github-readme-streak-stats.herokuapp.com?user=Ashwinjauhary&theme=tokyonight&hide_border=true&background=060c14&ring=9b5de5&fire=9b5de5&currStreakLabel=9b5de5&sideLabels=8899aa&dates=8899aa" 
+                    src="https://github-readme-streak-stats.herokuapp.com?user=samriddhibansal&theme=tokyonight&hide_border=true&background=060c14&ring=9b5de5&fire=9b5de5&currStreakLabel=9b5de5&sideLabels=8899aa&dates=8899aa" 
                     alt="GitHub Streak" 
                     className="max-w-full h-auto"
                   />
@@ -143,7 +143,7 @@ export default function Portfolio() {
                 <p className="font-sans font-bold text-[8px] sm:text-[10px] uppercase tracking-widest mb-3 border-b border-[#9b5de5]/30 pb-1 text-[#9b5de5]">Fig 1.5: Production Velocity Graph</p>
                 <div className="flex justify-center">
                   <InvestigativeLens 
-                    src="https://github-readme-activity-graph.vercel.app/graph?username=Ashwinjauhary&bg_color=060c14&color=9b5de5&line=7b3fe4&point=c49bff&area=true&hide_border=true" 
+                    src="https://github-readme-activity-graph.vercel.app/graph?username=samriddhibansal&bg_color=060c14&color=9b5de5&line=7b3fe4&point=c49bff&area=true&hide_border=true" 
                     alt="Activity Graph" 
                     className="max-w-full h-auto"
                   />

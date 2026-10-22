@@ -76,7 +76,7 @@ const renderWithLogos = (text: string) => {
             href={isEmail ? `mailto:${subPart}` : subPart}
             target={isEmail ? "_self" : "_blank"}
             rel="noopener noreferrer"
-            download={subPart.endsWith('.pdf') ? "Ashwin_Jauhary_Resume.pdf" : undefined}
+            download={subPart.endsWith('.pdf') ? "Samriddhi_Bansal_Resume.pdf" : undefined}
             className="text-[#C0392B] underline hover:text-black transition-colors font-bold wrap-break-word"
           >
             {subPart}
@@ -175,7 +175,7 @@ const TypewriterContent = ({ content, onFinish }: { content: string, onFinish?: 
 export default function NewsChat() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<{ role: string; content: string; isNew?: boolean }[]>([
-    { role: "assistant", content: "Extra! Extra! Correspondent Ashwin's official AI Dispatcher here. What's the scoop? Need the lowdown on his latest projects or technical clearances?", isNew: false }
+    { role: "assistant", content: "Extra! Extra! Correspondent Samriddhi Bansal's official AI Dispatcher here. What's the scoop? Need the lowdown on her Power BI analytics, academic milestones (9.18 CGPA), or Logix Club and GFG leadership?", isNew: false }
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -216,7 +216,7 @@ export default function NewsChat() {
       .replace(/\*\*/g, '');
 
     // Phonetic corrections for better pronunciation
-    cleanText = cleanText.replace(/Jauhary/gi, 'Jau-ha-ree');
+    cleanText = cleanText.replace(/Bansal/gi, 'Baan-saal').replace(/PSITCHE/gi, 'P-S-I-T');
 
     const tone = analyzeTone(text);
 
@@ -230,11 +230,11 @@ export default function NewsChat() {
     utterance.rate = tone.rate;
     utterance.pitch = tone.pitch; 
 
-    // Prioritize Mature Male Indian English voices
+    // Prioritize Indian English voices
     const voices = window.speechSynthesis.getVoices();
-    const targetVoice = voices.find(v => (v.lang.includes("en-IN") || v.name.includes("India")) && (v.name.includes("Male") || v.name.includes("Ravi")))
+    const targetVoice = voices.find(v => (v.lang.includes("en-IN") || v.name.includes("India")) && (v.name.includes("Female") || v.name.includes("Heera") || v.name.includes("Neerja") || v.name.includes("Zira")))
       || voices.find(v => v.lang.includes("en-IN") || v.name.includes("India"))
-      || voices.find(v => (v.name.includes("Google UK English Male") || v.name.includes("Male")))
+      || voices.find(v => (v.name.includes("Female") || v.name.includes("Google UK English Female")))
       || voices[0];
 
     if (targetVoice) utterance.voice = targetVoice;

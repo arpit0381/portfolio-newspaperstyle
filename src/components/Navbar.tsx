@@ -28,7 +28,7 @@ export default function Navbar() {
     <nav className="w-full bg-background border-b-[3px] border-foreground transition-colors duration-500 z-100 no-print">
       <div className="max-w-[1400px] mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between py-2 border-b border-foreground/20 gap-2 md:gap-0">
-          <span className="font-['Playfair_Display'] font-black text-sm italic hidden md:block text-foreground/40">The Ashwin Jauhary</span>
+          <span className="font-['Playfair_Display'] font-black text-sm italic hidden md:block text-foreground/40">The Samriddhi Bansal</span>
           
           <div className="flex items-center flex-wrap justify-center gap-x-3 sm:gap-x-5 gap-y-1 overflow-x-auto max-w-full pb-1 sm:pb-0 scrollbar-hide">
             {links.map((link) => {

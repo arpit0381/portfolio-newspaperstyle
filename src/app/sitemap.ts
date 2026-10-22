@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://the-ashwin-jauhary.vercel.app';
+  const baseUrl = 'https://samriddhi-bansal.vercel.app';
   
   return [
     {
