@@ -45,6 +45,6 @@ Detailed breakdown of certifications from **Infosys Springboard** (Power BI, Adv
 - **Correspondent**: Samriddhi Bansal
 - **Email**: [samriddhi.7289@gmail.com](mailto:samriddhi.7289@gmail.com)
 - **Phone**: +91-70817 89289
-- **LinkedIn**: [linkedin.com/in/samriddhibansalysihek](https://www.linkedin.com/in/samriddhibansalysihek)
+- **LinkedIn**: [linkedin.com/in/samriddhibansl1729](https://www.linkedin.com/in/samriddhibansl1729/)
 - **Location**: Kanpur, Uttar Pradesh, India
 "# portfolio-newspaperstyle" 
